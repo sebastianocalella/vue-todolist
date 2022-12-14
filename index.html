@@ -21,6 +21,8 @@
     <div id="app" class="container-fluid vh-100 vw-100 bg-grey">
         <div class="col-5 p-4">
             <h2>Lista delle cose da fare:</h2>
+            <input type="text" v-model.trim="newTodoElement">
+            <button class="ms-5 my-3" @click="addNewElement(newTodoElement)"> &plus; aggiungi</button>
             <ul class="py-2">
                 <li v-for="(todoElement,index) in todoList" 
                     :class="(todoElement.done) ? 'bar-text' : '' "

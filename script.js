@@ -3,6 +3,7 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
+            newTodoElement:'',
             todoList : [
                 {
                     text : "comprare il pane",
@@ -27,6 +28,10 @@ createApp({
     methods: {
         deleteElement(index){
             this.todoList.splice(index,1);
+        },
+        addNewElement(content){
+            this.todoList.push(content);
+            console.log(content);
         }
     }
 }).mount('#app');
