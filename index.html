@@ -26,7 +26,8 @@
             <ul class="py-2">
                 <li v-for="(todoElement,index) in todoList" 
                     :class="(todoElement.done) ? 'bar-text' : '' "
-                    class="d-flex justify-content-between">
+                    class="d-flex justify-content-between"
+                    @click="doneInverter(index)">
                     <p>
                         {{todoElement.text}}
                     </p>

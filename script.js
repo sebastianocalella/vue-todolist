@@ -35,6 +35,9 @@ createApp({
                 this.todoList.push({text : this.newTodoElement, done : false});
             }
             
+        },
+        doneInverter(index){
+            (this.todoList[index].done) ? this.todoList[index].done = false : this.todoList[index].done = true;
         }
     }
 }).mount('#app');
