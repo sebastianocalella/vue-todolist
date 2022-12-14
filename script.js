@@ -30,7 +30,11 @@ createApp({
             this.todoList.splice(index,1);
         },
         addNewElement(){
-            this.todoList.push({text : this.newTodoElement, done : false});
+            
+            if (!this.todoList.find(item => item.text === this.newTodoElement)){
+                this.todoList.push({text : this.newTodoElement, done : false});
+            }
+            
         }
     }
 }).mount('#app');
