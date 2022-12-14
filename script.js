@@ -29,9 +29,8 @@ createApp({
         deleteElement(index){
             this.todoList.splice(index,1);
         },
-        addNewElement(content){
-            this.todoList.push(content);
-            console.log(content);
+        addNewElement(){
+            this.todoList.push({text : this.newTodoElement, done : false});
         }
     }
 }).mount('#app');
