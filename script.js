@@ -30,11 +30,13 @@ createApp({
             this.todoList.splice(index,1);
         },
         addNewElement(){
-            
-            if (!this.todoList.find(item => item.text === this.newTodoElement)){
-                this.todoList.push({text : this.newTodoElement, done : false});
+            if(this.newTodoElement != ''){
+                if (!this.todoList.find(item => item.text === this.newTodoElement)){
+                    this.todoList.push({text : this.newTodoElement, done : false});
+                    this.newTodoElement = '';
+                }
             }
-            
+                
         },
         doneInverter(index){
             (this.todoList[index].done) ? this.todoList[index].done = false : this.todoList[index].done = true;
