@@ -18,7 +18,9 @@
     <div id="app" class="container-fluid vh-100 vw-100 bg-grey">
         <h2>Lista delle cose da fare:</h2>
         <ul>
-            <li v-for="todoElement in todoList">{{todoElement.text}}</li>
+            <li v-for="todoElement in todoList" :class="(todoElement.done) ? 'bar-text' : '' ">
+                {{todoElement.text}}
+            </li>
         </ul>
     </div>
 

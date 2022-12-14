@@ -6,3 +6,7 @@
 li{
     list-style-type: square;
 }
+
+.bar-text{
+    text-decoration: line-through;
+}
