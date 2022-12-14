@@ -3,8 +3,14 @@
     color: white;
 }
 
+
 li{
     list-style-type: square;
+}
+
+p:hover,
+i:hover{
+    cursor: pointer;
 }
 
 .bar-text{

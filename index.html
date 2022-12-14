@@ -22,7 +22,7 @@
         <div class="col-5 p-4">
             <h2>Lista delle cose da fare:</h2>
             <input type="text" v-model.trim="newTodoElement" @keyup.enter="addNewElement()">
-            <button class="ms-5 my-3" @click="addNewElement()"> &plus; aggiungi</button>
+            <button class="pb-1 pe-2 ms-5 my-3" @click="addNewElement()"> &plus; aggiungi</button>
             <ul class="py-2">
                 <li v-for="(todoElement,index) in todoList" 
                     :class="(todoElement.done) ? 'bar-text' : '' "
