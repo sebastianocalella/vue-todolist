@@ -12,16 +12,26 @@
     <!--custom CSS-->
     <link rel="stylesheet" href="style.css">
 
+    <!--FontAwesome reference-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
 </head>
 <body>
     
     <div id="app" class="container-fluid vh-100 vw-100 bg-grey">
-        <h2>Lista delle cose da fare:</h2>
-        <ul>
-            <li v-for="todoElement in todoList" :class="(todoElement.done) ? 'bar-text' : '' ">
-                {{todoElement.text}}
-            </li>
-        </ul>
+        <div class="col-5 p-4">
+            <h2>Lista delle cose da fare:</h2>
+            <ul class="py-2">
+                <li v-for="(todoElement,index) in todoList" 
+                    :class="(todoElement.done) ? 'bar-text' : '' "
+                    class="d-flex justify-content-between">
+                    <p>
+                        {{todoElement.text}}
+                    </p>
+                    <i class="fa-solid fa-trash-can" @click="deleteElement(index)"></i>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
